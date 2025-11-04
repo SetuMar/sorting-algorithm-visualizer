@@ -16,7 +16,6 @@ const prevOperationElement = document.getElementById('prev-button');
 const operationsDescriptionElement = document.getElementById('operations-description');
 
 const animationSpeedSlider = document.getElementById('animation-speed-slider');
-const animationSpeedOutput = document.getElementById('animation-speed-output');
 
 const scrubberElement = document.getElementById('scrubber');
 
@@ -229,9 +228,7 @@ prevOperationElement.onclick = () => {
 }
 
 animationSpeedSlider.oninput = () => {
-    updateInterval = parseInt(animationSpeedSlider.value);
-
-    animationSpeedOutput.innerHTML = updateInterval;
+    updateInterval = 100 - parseInt(animationSpeedSlider.value);
 }
 
 function playSort(currentTime) {
