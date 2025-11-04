@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm Visualizer</title>
+</head>
+<body>
+    <div id="canvas-container">
+        <p id="operations-description">Descriptions of operations will go here.</p>
+
+        <canvas id="canvas" width="50" height="50"></canvas>
+        
+        <input type="range" name="scrubber" id="scrubber" value="0" min="0" max="300" class="slider">
+
+        <!-- TODO: disable tab selection on elements when disabled -->
+
+        <div id="button-holder">
+            <button id="prev-button" class="hide-on-play ui-button">←</button>
+            <button id="play-button" class="ui-button">▶</button>
+            <button id="next-button" class="hide-on-play ui-button">→</button>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="animation-speed-slider">Animation Speed (ms)</label>
+            <input type="range" id="animation-speed-slider" min="10" max="99" value="50" class="slider">
+            <output id="animation-speed-output">50</output>
+        </div>
+
+        <br>
+
+        <div>
+            <div>
+                <label for="sorting-method" class="hide-on-play">Sort Using</label>
+                <select id="sorting-method" name="sorting-method" class="hide-on-play">
+                    <option value="bubble">Bubble Sort</option>
+                    <option value="insertion">Insertion Sort</option>
+                    <option value="quick">Quick Sort</option>
+                    <option value="selection">Selection Sort</option>
+                    <!-- Add more sorting methods here -->
+                </select>
+            </div>
+            
+            <div>
+                <label for="array-size-slider" class="hide-on-play">Array Size</label>
+                <input type="range" id="array-size-slider" min="3" max="99" value="25" class="hide-on-play slider">
+                <output id="array-size-output" class="hide-on-play">25</output>
+            </div>
+        </div>
+
+        <br>
+
+    </div>
+    
+    <script type="module" src="main.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</body>
+</html>

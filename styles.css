@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:wght@900&family=Roboto:wght@100&family=Tagesschrift&display=swap');
+
+body {
+  font-family: 'Merriweather', serif;
+  background-color: #E4DFDA;
+  color: #2A2A2A;
+}
+
+#canvas {
+    border: 2px solid #2A2A2A;
+    border-radius: 10px;
+}
+
+#button-holder {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.ui-button {
+    display: flex;
+    justify-content: center;
+    border: none;
+    background-color: #c6c1bb;
+    border-radius: 3px;
+    width: 20px;
+    height: 20px;
+}
+
+.ui-button:hover {
+    background-color: rgb(172, 163, 158);
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #A8A0A0;
+    transition: 0.1s ease-in-out;
+}
+
+#canvas-container {
+    display: flex; /* convert to a flex container */
+    justify-content: center; /* align content in the div horizontally to the center*/
+    align-items: center; /* align content in the div vertically to the center */
+    height: 80vh; /* make the container take full viewport height */
+    flex-direction: column;
+    position: relative;
+}
+
+#operations-description {
+    text-align: center;
+    top: 0;
+}
+
+.deactivated {
+    pointer-events: none;
+    opacity: 0.25;
+}
+
+.hide-on-play {
+    transition: opacity 0.2s ease-in-out;   
+}
+
+#scrubber {
+    width: 50%;
+    margin-top: 10px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    height: 8px;
+    border-radius: 5px;
+    background: #c6c1bb;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+#sorting-method {
+    /* removes the arrow */
+    appearance: none;             
+    -webkit-appearance: none;     
+    -moz-appearance: none;
+
+  background-color: #E4DFDA;    
+  color: #2E5F7A;           
+  font-family: 'Merriweather', serif; 
+  font-size: 14px;
+
+  border: 2px solid #2E5F7A;    
+  border-radius: 6px;
+  padding: 5px 5px 5px 5px;
+  cursor: pointer;
+  transition: all 0.2s ease; 
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #2E5F7A; 
+  border-radius: 50%; 
+  border: 2px solid #1F3C50; 
+  transition: 0.1s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  background: #1d3749; 
+}
+
+.slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: #2E5F7A;
+  border-radius: 50%;
+  border: 2px solid #1F3C50;
+  transition: 0.1s ease;
+}
+
+@media (max-width: 700px) {
+    #canvas-container {
+        padding-top: 20%;
+    }
+
+    #operations-description {
+        position: absolute;
+    }
+
+    .ui-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: #c6c1bb;
+        border-radius: 3px;
+        width: 40px;
+        height: 40px;
+    }
+}
